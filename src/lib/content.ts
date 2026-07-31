@@ -73,19 +73,19 @@ export const credentialLine = 'Colegio Médico de La Paz, N.º B-0252 — Especi
 // Nombres de ícono = componentes de @lucide/svelte (PascalCase).
 export const specialties: Specialty[] = [
 	{
-		icon: 'Bone',
+		icon: 'Activity',
 		title: 'Cirugía artroscópica de hombro',
 		description:
-			'Diagnóstico y tratamiento mínimamente invasivo de lesiones del manguito rotador, inestabilidad e inestabilidad de hombro.'
+			'Diagnóstico y tratamiento mínimamente invasivo de lesiones del manguito rotador e inestabilidad de hombro.'
 	},
 	{
-		icon: 'CircleDot',
+		icon: 'Target',
 		title: 'Cirugía artroscópica de rodilla',
 		description:
 			'Reconstrucción de ligamento cruzado anterior (LCA), reparación meniscal y tratamiento de lesiones deportivas de rodilla.'
 	},
 	{
-		icon: 'ShieldPlus',
+		icon: 'ShieldCheck',
 		title: 'Reparación meniscal y medicina regenerativa',
 		description:
 			'Uso de técnicas actualizadas y ortobiológicos como adyuvante en la reparación de meniscos — área en la que el Dr. Bacarreza ha sido ponente internacional.'
@@ -197,7 +197,9 @@ export const testimonials: Testimonial[] = [
 ];
 
 // --- Footer / redes sociales ---
+// Ambas quedan pendientes en la UI: Facebook está confirmado como canal a vincular pero falta
+// la URL exacta de la página; LinkedIn existe pero está poco activo, a confirmar si se vincula.
 export const footerSocials: SocialLink[] = [
-	{ label: 'Facebook', href: null }, // Confirmado como canal a vincular; falta la URL exacta de la página.
+	{ label: 'Facebook', href: null, pending: true },
 	{ label: 'LinkedIn', href: null, pending: true }
 ];
