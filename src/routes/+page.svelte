@@ -1,17 +1,16 @@
 <script lang="ts">
-	// Etapa 2: shell (Header + Footer). Las secciones de contenido se agregan en las etapas siguientes.
+	// Etapa 3: Hero + Sobre el Dr. Las demás secciones se agregan en las próximas etapas.
 	import Header from '$lib/components/Header.svelte';
+	import Hero from '$lib/components/Hero.svelte';
+	import AboutDoctor from '$lib/components/AboutDoctor.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
 <Header />
 
 <main>
-	<section id="inicio" class="section-wrap">
-		<p class="kicker">Etapa 2 — shell</p>
-		<h1 class="h2">Header sticky + menú mobile + footer listos</h1>
-		<p>Las secciones de contenido (hero, sobre el Dr., especialidades, etc.) se agregan en las próximas etapas.</p>
-	</section>
+	<Hero />
+	<AboutDoctor />
 </main>
 
 <Footer />
