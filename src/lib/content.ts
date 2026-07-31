@@ -40,14 +40,19 @@ export const contactInfo = {
 	whatsappDisplay: '77210582',
 	whatsappPending: true, // "[confirmar si 77210582 es el número que quiere usar para agendar citas por WhatsApp]"
 	hours: 'Lunes a viernes, 18:00 a 20:00',
-	hoursPending: true // "[confirmar si sigue vigente]"
+	hoursPending: true, // "[confirmar si sigue vigente]"
+	// Coordenadas exactas del Edificio CES (verificadas en Google Maps), para que el pin del
+	// embed caiga sobre el edificio en vez de aproximar por geocodificación de texto.
+	coordinates: { lat: -16.5260338, lng: -68.11025599999999 }
 };
 
-// Embed de Google Maps sin API key (geocodifica la dirección vía el parámetro `q`). Si más
-// adelante se cuenta con una Maps Embed API key o coordenadas exactas del consultorio, conviene
-// migrar a `https://www.google.com/maps/embed/v1/place?key=...&q=...` para mayor precisión.
-export function googleMapsEmbedSrc(query: string = contactInfo.address): string {
-	return `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+// Embed de Google Maps sin API key, centrado en las coordenadas exactas del consultorio (más
+// preciso que geocodificar la dirección por texto). Si más adelante se cuenta con una Maps
+// Embed API key, se puede migrar a `https://www.google.com/maps/embed/v1/place?key=...` sin
+// perder esta precisión.
+export function googleMapsEmbedSrc(): string {
+	const { lat, lng } = contactInfo.coordinates;
+	return `https://www.google.com/maps?q=${lat},${lng}&z=17&output=embed`;
 }
 
 // --- Hero ---
