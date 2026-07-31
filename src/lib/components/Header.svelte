@@ -2,7 +2,7 @@
 	import Phone from '@lucide/svelte/icons/phone';
 	import Menu from '@lucide/svelte/icons/menu';
 	import X from '@lucide/svelte/icons/x';
-	import logoDark from '$lib/assets/logo/logo-v3-simple-dark.svg';
+	import logoDark from '$lib/assets/logo/logo-v3-simplificado-fondo-oscuro-transparente.png';
 	import { navLinks, contactInfo } from '$lib/content';
 	import WhatsAppButton from './shared/WhatsAppButton.svelte';
 
