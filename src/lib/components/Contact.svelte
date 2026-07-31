@@ -139,11 +139,9 @@
 	}
 
 	.field label {
-		font-size: 13px;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
-		color: var(--color-neutral-700);
+		font-size: 14px;
+		font-weight: 400;
+		color: var(--color-text);
 	}
 
 	.input {

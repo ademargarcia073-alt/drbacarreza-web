@@ -14,7 +14,7 @@ export const siteName = 'Dr. Fernando Bacarreza Bruno';
 // El nav del handoff (README) usa 5 anclas; el logo/nombre en el header ya enlaza a #inicio,
 // por eso "Inicio" no se repite como link de nav (el borrador de contenido original sí lo listaba).
 export const navLinks: NavLink[] = [
-	{ label: 'Sobre el Dr. Bacarreza', href: '#sobre' },
+	{ label: 'Sobre el Dr.', href: '#sobre' },
 	{ label: 'Especialidades', href: '#especialidades' },
 	{ label: 'Trayectoria', href: '#trayectoria' },
 	{ label: 'Preguntas frecuentes', href: '#faq' },

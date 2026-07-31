@@ -24,7 +24,7 @@
 			<h2 class="h2">Trayectoria clínica y compromiso académico</h2>
 
 			<p class="about-paragraph">
-				{yearsPrefix}<PendingBadge text="X años — confirmar" />{yearsSuffix}
+				{yearsPrefix}<PendingBadge /> [X años]{yearsSuffix}
 			</p>
 			{#each restParagraphs as paragraph, i (i)}
 				<p class="about-paragraph">{@html paragraph}</p>
