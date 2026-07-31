@@ -28,6 +28,7 @@ export interface Testimonial {
 	quote: string;
 	attribution: string;
 	pending?: boolean;
+	pendingNote?: string;
 }
 
 export interface SocialLink {

@@ -43,6 +43,10 @@ export const contactInfo = {
 	hoursPending: true // "[confirmar si sigue vigente]"
 };
 
+// Placeholder de mapa (README de diseño: sección Ubicación). Reemplazar por un embed real de
+// Google Maps con contactInfo.address cuando se confirme el deploy — no es bloqueante ahora.
+export const mapPlaceholderText = 'Mapa de Google Maps embebido aquí (ubicación del consultorio)';
+
 // --- Hero ---
 export const heroKicker = 'Traumatología y ortopedia — La Paz, Bolivia';
 
@@ -198,12 +202,17 @@ export const faqs: FaqItem[] = [
 ];
 
 // --- Testimonios ---
+// Atribución con iniciales únicamente (R.Q.S.) — resguardo hasta tener consentimiento explícito
+// de la paciente para publicar su nombre completo. El pendingNote es un badge propio, separado
+// del texto del testimonio, que documenta puntualmente qué falta confirmar (el consentimiento
+// de uso, no el contenido de la cita en sí).
 export const testimonials: Testimonial[] = [
 	{
 		quote:
 			'Agradezco a Dios y al Dr. Bacarreza por la exitosa intervención quirúrgica [...] Todo ello se ve reflejado en mi situación actual, ya que gozo de buena salud, como resultado de una intervención quirúrgica y de una recuperación exitosas, y lo más importante, a la fecha no sufro de molestias o problema alguno.',
 		attribution: 'R.Q.S., paciente tratada por fractura de tibia y peroné (2019)',
-		pending: true // Falta confirmar con la paciente el consentimiento para uso en marketing.
+		pending: true,
+		pendingNote: 'Consentimiento de uso con fines de marketing'
 	}
 ];
 
