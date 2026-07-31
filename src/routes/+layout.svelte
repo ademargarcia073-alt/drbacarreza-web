@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import { siteName } from '$lib/content';
 
 	let { children } = $props();
@@ -12,8 +11,9 @@
 		name="description"
 		content="Cirugía reconstructiva y artroscópica de hombro y rodilla. Dr. Fernando Bacarreza Bruno, traumatólogo ortopedista en La Paz, Bolivia."
 	/>
-	<link rel="icon" href={favicon} type="image/svg+xml" />
 	<link rel="icon" href="/favicon.ico" sizes="any" />
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 </svelte:head>
 

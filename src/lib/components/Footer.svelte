@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logoDark from '$lib/assets/logo/logo-v3-simple-dark.svg';
+	import logoDark from '$lib/assets/logo/logo-v3-simplificado-fondo-oscuro-transparente.png';
 	import { contactInfo, credentialLine, footerSocials, siteName } from '$lib/content';
 	import PendingBadge from './shared/PendingBadge.svelte';
 
