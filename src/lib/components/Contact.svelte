@@ -1,11 +1,12 @@
 <script lang="ts">
+	import { PUBLIC_WEB3FORMS_ACCESS_KEY } from '$env/static/public';
 	import WhatsAppButton from './shared/WhatsAppButton.svelte';
 
 	let name = $state('');
 	let phone = $state('');
 	let reason = $state('');
 	let preferredTime = $state('');
-	let submitted = $state(false);
+	let status: 'idle' | 'submitting' | 'success' | 'error' = $state('idle');
 	let errors: Record<string, string> = $state({});
 
 	function validate() {
@@ -17,19 +18,40 @@
 		return Object.keys(next).length === 0;
 	}
 
-	function handleSubmit(event: SubmitEvent) {
+	async function handleSubmit(event: SubmitEvent) {
 		event.preventDefault();
-		submitted = false;
 		if (!validate()) return;
 
-		// El envío real (email o servicio tipo Web3Forms) queda como siguiente paso, no bloqueante
-		// para esta etapa — por ahora el formulario sólo valida y confirma en el frontend.
-		submitted = true;
-		name = '';
-		phone = '';
-		reason = '';
-		preferredTime = '';
-		errors = {};
+		status = 'submitting';
+		try {
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+				body: JSON.stringify({
+					access_key: PUBLIC_WEB3FORMS_ACCESS_KEY,
+					subject: 'Nueva solicitud de consulta — sitio Dr. Bacarreza',
+					from_name: name,
+					Nombre: name,
+					Teléfono: phone,
+					'Motivo de consulta': reason,
+					'Horario preferido': preferredTime || 'No especificado'
+				})
+			});
+			const result = await response.json();
+
+			if (result.success) {
+				status = 'success';
+				name = '';
+				phone = '';
+				reason = '';
+				preferredTime = '';
+				errors = {};
+			} else {
+				status = 'error';
+			}
+		} catch {
+			status = 'error';
+		}
 	}
 </script>
 
@@ -46,9 +68,14 @@
 		</div>
 
 		<form class="contact-form" onsubmit={handleSubmit} novalidate>
-			{#if submitted}
+			{#if status === 'success'}
 				<p class="form-success" role="status">
 					Gracias, recibimos tu solicitud. Nos pondremos en contacto a la brevedad.
+				</p>
+			{:else if status === 'error'}
+				<p class="form-error-banner" role="alert">
+					No pudimos enviar tu solicitud. Probá de nuevo en un momento o escribinos directamente
+					por WhatsApp.
 				</p>
 			{/if}
 
@@ -102,7 +129,9 @@
 				/>
 			</div>
 
-			<button type="submit" class="btn btn-secondary">Enviar solicitud</button>
+			<button type="submit" class="btn btn-secondary" disabled={status === 'submitting'}>
+				{status === 'submitting' ? 'Enviando...' : 'Enviar solicitud'}
+			</button>
 		</form>
 	</div>
 </section>
@@ -178,6 +207,21 @@
 		border: 2px solid var(--color-accent-700);
 		padding: 12px 14px;
 		margin: 0;
+	}
+
+	.form-error-banner {
+		font-size: 14px;
+		font-weight: 600;
+		color: var(--color-text);
+		background: var(--color-accent-100);
+		border: 2px solid var(--color-accent);
+		padding: 12px 14px;
+		margin: 0;
+	}
+
+	.contact-form button[disabled] {
+		opacity: 0.6;
+		cursor: not-allowed;
 	}
 
 	@media (max-width: 768px) {
