@@ -2,7 +2,7 @@
 	import MapPin from '@lucide/svelte/icons/map-pin';
 	import Phone from '@lucide/svelte/icons/phone';
 	import Clock from '@lucide/svelte/icons/clock';
-	import { contactInfo, mapPlaceholderText } from '$lib/content';
+	import { contactInfo, googleMapsEmbedSrc } from '$lib/content';
 	import PendingBadge from './shared/PendingBadge.svelte';
 </script>
 
@@ -39,8 +39,15 @@
 			</div>
 		</div>
 
-		<div class="map-placeholder">
-			<p>{mapPlaceholderText}</p>
+		<div class="map-embed-wrap">
+			<iframe
+				class="map-embed"
+				src={googleMapsEmbedSrc()}
+				title="Ubicación del consultorio del Dr. Bacarreza en Google Maps"
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+				allowfullscreen
+			></iframe>
 		</div>
 	</div>
 </section>
@@ -80,21 +87,18 @@
 		vertical-align: middle;
 	}
 
-	.map-placeholder {
+	.map-embed-wrap {
 		background: var(--color-surface);
 		border: 2px solid var(--color-neutral-300);
-		display: flex;
-		align-items: center;
-		justify-content: center;
 		min-height: 280px;
 	}
 
-	.map-placeholder p {
-		font-size: 14px;
-		color: var(--color-neutral-700);
-		text-align: center;
-		padding: 24px;
-		margin: 0;
+	.map-embed {
+		width: 100%;
+		height: 100%;
+		min-height: 280px;
+		border: 0;
+		display: block;
 	}
 
 	@media (max-width: 768px) {

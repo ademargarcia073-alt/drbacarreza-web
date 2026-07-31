@@ -43,9 +43,12 @@ export const contactInfo = {
 	hoursPending: true // "[confirmar si sigue vigente]"
 };
 
-// Placeholder de mapa (README de diseño: sección Ubicación). Reemplazar por un embed real de
-// Google Maps con contactInfo.address cuando se confirme el deploy — no es bloqueante ahora.
-export const mapPlaceholderText = 'Mapa de Google Maps embebido aquí (ubicación del consultorio)';
+// Embed de Google Maps sin API key (geocodifica la dirección vía el parámetro `q`). Si más
+// adelante se cuenta con una Maps Embed API key o coordenadas exactas del consultorio, conviene
+// migrar a `https://www.google.com/maps/embed/v1/place?key=...&q=...` para mayor precisión.
+export function googleMapsEmbedSrc(query: string = contactInfo.address): string {
+	return `https://www.google.com/maps?q=${encodeURIComponent(query)}&output=embed`;
+}
 
 // --- Hero ---
 export const heroKicker = 'Traumatología y ortopedia — La Paz, Bolivia';
