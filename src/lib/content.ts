@@ -16,6 +16,9 @@ import type {
 	Testimonial,
 	SocialLink
 } from './types';
+import casoHumeroRadiografia1 from './assets/images/casos/caso-humero-proximal-radiografia-1.jpg';
+import casoHumeroRadiografia2 from './assets/images/casos/caso-humero-proximal-radiografia-2.jpg';
+import casoHumeroRadiografia3 from './assets/images/casos/caso-humero-proximal-radiografia-3.jpg';
 
 export const siteName = 'Dr. Fernando Bacarreza Bruno';
 
@@ -182,10 +185,9 @@ export const clinicalCases: ClinicalCase[] = [
 		quoteAttribution: 'Dr. Fernando Bacarreza Bruno',
 		context:
 			'Las fracturas de húmero proximal —la parte superior del brazo, cerca del hombro— requieren una reducción anatómica precisa para restaurar la movilidad completa del paciente. En este caso, la fijación se realizó con placa y tornillos, buscando una consolidación estable del hueso.',
-		// TODO: las 3 radiografías (reducción con placa y tornillos) fueron referenciadas por el
-		// cliente pero no llegaron como archivo a este entorno — pedir que las reenvíe y agregar
-		// los imports acá (mismo patrón que sobre-dr-quirofano.jpg en AboutDoctor.svelte).
-		images: [],
+		// Radiografías sin EXIF ni texto identificable del paciente visible en el encuadre
+		// (revisado antes de subir); igual falta la confirmación de consentimiento — ver pending.
+		images: [casoHumeroRadiografia1, casoHumeroRadiografia2, casoHumeroRadiografia3],
 		videoEmbedUrl: 'https://www.youtube.com/embed/uz6peHDpero',
 		videoTitle:
 			'Video demostrativo: reducción y fijación de fractura de húmero proximal — Dr. Fernando Bacarreza',
