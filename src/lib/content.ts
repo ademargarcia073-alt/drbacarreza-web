@@ -7,7 +7,15 @@
 // llegue la confirmación del cliente. Ver la lista completa de preguntas pendientes al final
 // del borrador de contenido original.
 
-import type { FaqItem, NavLink, Specialty, TimelineItem, Testimonial, SocialLink } from './types';
+import type {
+	ClinicalCase,
+	FaqItem,
+	NavLink,
+	Specialty,
+	TimelineItem,
+	Testimonial,
+	SocialLink
+} from './types';
 
 export const siteName = 'Dr. Fernando Bacarreza Bruno';
 
@@ -17,6 +25,7 @@ export const navLinks: NavLink[] = [
 	{ label: 'Sobre el Dr.', href: '#sobre' },
 	{ label: 'Especialidades', href: '#especialidades' },
 	{ label: 'Trayectoria', href: '#trayectoria' },
+	{ label: 'Intervenciones', href: '#intervenciones' },
 	{ label: 'Preguntas frecuentes', href: '#faq' },
 	{ label: 'Contacto', href: '#contacto' }
 ];
@@ -154,6 +163,37 @@ export const timeline: TimelineItem[] = [
 
 export const timelineNote =
 	'Esta sección se actualiza con cada nuevo evento académico del Dr. Bacarreza.';
+
+// --- Intervenciones (Casos clínicos) ---
+// Sección nueva (borrador, sección 5.1). Diseñada como lista, no como bloque fijo de un caso —
+// se pueden agregar más casos con el tiempo sin tocar el componente (ClinicalCases.svelte /
+// ClinicalCaseCard.svelte), sólo agregando entradas a `clinicalCases`.
+export const casesKicker = 'Casos clínicos';
+export const casesHeading = 'Intervenciones recientes';
+export const casesIntro =
+	'Cada intervención es distinta. Compartimos algunos casos reales para mostrar el tipo de trabajo que realiza el Dr. Bacarreza — siempre con el objetivo de una recuperación funcional completa.';
+
+export const clinicalCases: ClinicalCase[] = [
+	{
+		slug: 'fractura-humero-proximal',
+		title: 'Fractura de húmero proximal',
+		quote:
+			'Una fractura de húmero proximal debe ser reducida de forma anatómica. Acude con traumatólogos expertos, podemos ayudarte.',
+		quoteAttribution: 'Dr. Fernando Bacarreza Bruno',
+		context:
+			'Las fracturas de húmero proximal —la parte superior del brazo, cerca del hombro— requieren una reducción anatómica precisa para restaurar la movilidad completa del paciente. En este caso, la fijación se realizó con placa y tornillos, buscando una consolidación estable del hueso.',
+		// TODO: las 3 radiografías (reducción con placa y tornillos) fueron referenciadas por el
+		// cliente pero no llegaron como archivo a este entorno — pedir que las reenvíe y agregar
+		// los imports acá (mismo patrón que sobre-dr-quirofano.jpg en AboutDoctor.svelte).
+		images: [],
+		videoEmbedUrl: 'https://www.youtube.com/embed/uz6peHDpero',
+		videoTitle:
+			'Video demostrativo: reducción y fijación de fractura de húmero proximal — Dr. Fernando Bacarreza',
+		pending: true,
+		pendingNote:
+			'Confirmar consentimiento del paciente para publicar estas radiografías y el video con fines de marketing'
+	}
+];
 
 // --- Patologías / Cuándo consultar ---
 export const pathologies: string[] = [

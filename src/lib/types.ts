@@ -36,3 +36,17 @@ export interface SocialLink {
 	href: string | null;
 	pending?: boolean;
 }
+
+export interface ClinicalCase {
+	slug: string;
+	title: string;
+	quote: string;
+	quoteAttribution: string;
+	context: string;
+	images: string[];
+	videoEmbedUrl?: string;
+	videoTitle?: string;
+	pending?: boolean;
+	pendingNote?: string;
+}
+
