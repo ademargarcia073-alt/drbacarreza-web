@@ -98,7 +98,7 @@
 	.case-media-note {
 		font-size: 13px;
 		font-style: italic;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin: 0 0 24px;
 	}
 
@@ -121,14 +121,14 @@
 	.case-quote-attribution {
 		font-size: 14px;
 		font-weight: 700;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin: 0;
 	}
 
 	.case-context {
 		font-size: 15px;
 		line-height: 1.65;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin: 0;
 	}
 
@@ -142,7 +142,7 @@
 
 	.case-pending-note {
 		font-size: 13px;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 	}
 
 	@media (max-width: 768px) {

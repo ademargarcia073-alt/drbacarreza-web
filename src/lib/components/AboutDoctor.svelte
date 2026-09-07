@@ -78,7 +78,7 @@
 	.about-paragraph {
 		font-size: 16px;
 		line-height: 1.75;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin: 0 0 20px;
 	}
 
@@ -99,14 +99,14 @@
 	.about-quote-text {
 		font-size: 15px;
 		line-height: 1.6;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		font-style: italic;
 		margin: 0;
 	}
 
 	.about-credential {
 		font-size: 14px;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		font-weight: 600;
 		margin: 0;
 	}

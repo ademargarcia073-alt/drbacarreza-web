@@ -2,7 +2,7 @@
 	import Phone from '@lucide/svelte/icons/phone';
 	import Menu from '@lucide/svelte/icons/menu';
 	import X from '@lucide/svelte/icons/x';
-	import logoDark from '$lib/assets/logo/logo-v3-simplificado-fondo-oscuro-transparente.png';
+	import logoLight from '$lib/assets/logo/logo-v3-simplificado-fondo-claro-transparente.png';
 	import { navLinks, contactInfo } from '$lib/content';
 	import WhatsAppButton from './shared/WhatsAppButton.svelte';
 
@@ -20,7 +20,7 @@
 <header class="site-header">
 	<div class="header-bar">
 		<a href="#inicio" class="brand" onclick={closeMenu}>
-			<img src={logoDark} alt="" width="44" height="44" class="brand-logo" />
+			<img src={logoLight} alt="" width="44" height="44" class="brand-logo" />
 			<span class="brand-text">
 				<span class="brand-name">Dr. Fernando Bacarreza</span>
 				<span class="brand-role">Cirugía Articular</span>
@@ -112,7 +112,7 @@
 
 	.brand-role {
 		font-size: 12px;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		font-weight: 600;
 		letter-spacing: 0.02em;
 	}

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logoDark from '$lib/assets/logo/logo-v3-simplificado-fondo-oscuro-transparente.png';
+	import logoLight from '$lib/assets/logo/logo-v3-simplificado-fondo-claro-transparente.png';
 	import { contactInfo, credentialLine, footerSocials, siteName } from '$lib/content';
 	import PendingBadge from './shared/PendingBadge.svelte';
 
@@ -10,7 +10,7 @@
 	<div class="section-wrap footer-grid">
 		<div>
 			<div class="footer-brand">
-				<img src={logoDark} alt="" width="36" height="36" />
+				<img src={logoLight} alt="" width="36" height="36" />
 				<span class="footer-brand-name">{siteName}</span>
 			</div>
 			<p class="footer-text">Cirugía Articular</p>
@@ -84,7 +84,7 @@
 
 	.footer-text {
 		font-size: 13px;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		line-height: 1.7;
 		margin: 0 0 6px;
 	}

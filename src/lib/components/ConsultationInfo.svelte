@@ -57,7 +57,7 @@
 	.consulta-card p {
 		font-size: 15px;
 		line-height: 1.65;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin: 0;
 	}
 
@@ -66,7 +66,7 @@
 		padding-left: 20px;
 		font-size: 15px;
 		line-height: 1.8;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 	}
 
 	.consulta-note {
@@ -74,7 +74,7 @@
 		align-items: center;
 		gap: 8px;
 		font-size: 13px;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin-top: 16px;
 	}
 

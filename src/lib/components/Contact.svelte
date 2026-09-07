@@ -150,7 +150,7 @@
 	.contact-text {
 		font-size: 15px;
 		line-height: 1.65;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin: 0 0 28px;
 		max-width: 440px;
 	}
@@ -175,7 +175,7 @@
 
 	.input {
 		background: var(--color-surface);
-		border: 2px solid var(--color-divider);
+		border: 2px solid var(--color-input-border);
 		color: var(--color-text);
 		font-family: var(--font-body);
 		font-size: 15px;
@@ -183,7 +183,7 @@
 	}
 
 	.input::placeholder {
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 	}
 
 	.input:focus-visible {
@@ -197,14 +197,15 @@
 
 	.field-error {
 		font-size: 13px;
-		color: var(--color-accent-700);
+		color: var(--color-accent-800);
 	}
 
 	.form-success {
 		font-size: 14px;
 		font-weight: 600;
-		color: var(--color-accent-700);
-		border: 2px solid var(--color-accent-700);
+		color: var(--color-text);
+		background: var(--color-surface);
+		border: 2px solid var(--color-accent);
 		padding: 12px 14px;
 		margin: 0;
 	}
