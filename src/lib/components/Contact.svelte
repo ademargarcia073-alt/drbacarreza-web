@@ -175,7 +175,7 @@
 
 	.input {
 		background: var(--color-surface);
-		border: 2px solid var(--color-divider);
+		border: 2px solid var(--color-input-border);
 		color: var(--color-text);
 		font-family: var(--font-body);
 		font-size: 15px;

@@ -19,6 +19,12 @@
 	--color-accent-800: #a6491e;
 	--color-accent-100: #faeadc;
 	--color-divider: #d8cfbc;
+	/* Borde de inputs de formulario — separado de --color-divider a propósito: ese token
+	   (#D8CFBC) es puramente decorativo (marcos de fotos, separadores de sección) y mide sólo
+	   ~1.4–1.5:1 contra blanco/crema, casi invisible como affordance de campo interactivo.
+	   --color-input-border da 4.11:1 contra --color-surface (blanco) — por encima del mínimo
+	   de 3:1 de WCAG 1.4.11 para límites de componentes de UI. */
+	--color-input-border: #8f7a5c;
 	--color-neutral-100: #efe7d6;
 	--color-neutral-200: #f2ecdd;
 	--color-neutral-300: #9c8563;
