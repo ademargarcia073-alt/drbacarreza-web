@@ -13,8 +13,9 @@
 		font-weight: 700;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
-		color: var(--color-accent-700);
-		border: 1.5px solid var(--color-accent-700);
+		background: var(--color-surface);
+		color: var(--color-text);
+		border: 1.5px solid var(--color-accent);
 		padding: 3px 8px;
 	}
 </style>

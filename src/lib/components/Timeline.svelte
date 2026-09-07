@@ -52,7 +52,7 @@
 
 	.timeline-note {
 		font-size: 13px;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin-top: 20px;
 	}
 

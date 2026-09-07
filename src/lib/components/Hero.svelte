@@ -56,7 +56,7 @@
 	.hero-support {
 		font-size: 17px;
 		line-height: 1.65;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		max-width: 520px;
 		margin: 0 0 32px;
 	}

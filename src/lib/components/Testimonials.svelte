@@ -53,7 +53,7 @@
 	.testimonial-attribution {
 		font-size: 14px;
 		font-weight: 700;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin: 0 0 12px;
 	}
 
@@ -66,6 +66,6 @@
 
 	.testimonial-pending-note {
 		font-size: 13px;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 	}
 </style>

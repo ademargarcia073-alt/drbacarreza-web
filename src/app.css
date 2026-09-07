@@ -3,20 +3,28 @@
 @import '@fontsource/archivo/800.css';
 
 :root {
-	/* Paleta "Altiplano invertido" — ver design_handoff_web_medico/README.md */
-	--color-bg: #0f3d3e;
-	--color-surface: #16423f;
-	--color-text: #efeae2;
-	--color-accent: #d2733d;
-	--color-accent-600: #de8654;
-	--color-accent-700: #e9a170;
-	--color-accent-800: #f0b98d;
-	--color-accent-100: #3a2a1e;
-	--color-divider: #b08a64;
-	--color-neutral-100: #14403f;
-	--color-neutral-200: #1a4744;
-	--color-neutral-300: #2e5450;
-	--color-neutral-700: #c9c2b4;
+	/* Paleta "Cálido claro" (Opción B) — reemplaza la paleta oscura "Altiplano invertido" original.
+	   Contraste WCAG verificado con un script ad-hoc antes de aplicar (ver resumen en el PR):
+	   texto principal/secundario sobre fondo y superficie >= 6.1:1 (AA normal-text OK en todos
+	   los casos); el acento (#C9642F) usado como texto/ícono da 3.5–3.9:1 — pasa el umbral de
+	   3:1 para texto grande/íconos/UI, pero queda corto de 4.5:1 para texto chico (ver nota sobre
+	   kickers en el resumen de QA). */
+	--color-bg: #f5f1e8;
+	--color-surface: #ffffff;
+	--color-text: #1c3a52;
+	--color-text-secondary: #5c5347;
+	--color-accent: #c9642f;
+	--color-accent-600: #b15829;
+	--color-accent-700: #c9642f;
+	--color-accent-800: #a6491e;
+	--color-accent-100: #faeadc;
+	--color-divider: #d8cfbc;
+	--color-neutral-100: #efe7d6;
+	--color-neutral-200: #f2ecdd;
+	--color-neutral-300: #9c8563;
+	/* Texto sobre fondos sólidos de acento (ej. btn-primary) — --color-text ya no sirve para esto
+	   porque ahora es oscuro (antes, en el tema oscuro, --color-text era claro y cumplía ambos roles). */
+	--color-on-accent: #ffffff;
 
 	--font-heading: 'Archivo', system-ui, sans-serif;
 	--font-body: 'Archivo', system-ui, sans-serif;
@@ -29,7 +37,7 @@
 	--section-padding-inline: 32px;
 	--section-max-width: 1200px;
 
-	color-scheme: dark;
+	color-scheme: light;
 }
 
 @media (max-width: 768px) {
@@ -99,7 +107,9 @@ button {
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.12em;
-	color: var(--color-accent-700);
+	/* accent-800 (no accent-700): a 13px es texto chico, necesita 4.5:1 y accent-700 sólo daba
+	   ~3.2–3.9:1 según la sección. accent-800 da 4.75–5.8:1 en todos los fondos del sitio. */
+	color: var(--color-accent-800);
 }
 
 .h2 {
@@ -130,7 +140,7 @@ button {
 
 .btn-primary {
 	background: var(--color-accent);
-	color: var(--color-text);
+	color: var(--color-on-accent);
 }
 
 .btn-primary:hover {
@@ -154,6 +164,7 @@ button {
 	padding: 6px 14px;
 	font-size: 13px;
 	font-weight: 600;
-	border: 2px solid var(--color-divider);
-	color: var(--color-neutral-700);
+	background: var(--color-surface);
+	border: 2px solid var(--color-accent);
+	color: var(--color-text);
 }

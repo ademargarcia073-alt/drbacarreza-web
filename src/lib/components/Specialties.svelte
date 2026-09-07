@@ -60,7 +60,7 @@
 	.specialty-card p {
 		font-size: 14px;
 		line-height: 1.6;
-		color: var(--color-neutral-700);
+		color: var(--color-text-secondary);
 		margin: 0;
 	}
 
