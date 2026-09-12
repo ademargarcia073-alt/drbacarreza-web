@@ -27,32 +27,34 @@
 			</span>
 		</a>
 
-		<nav class="nav-desktop" aria-label="Navegación principal">
-			{#each navLinks as link (link.href)}
-				<a href={link.href}>{link.label}</a>
-			{/each}
-		</nav>
+		<div class="header-right">
+			<nav class="nav-desktop" aria-label="Navegación principal">
+				{#each navLinks as link (link.href)}
+					<a href={link.href}>{link.label}</a>
+				{/each}
+			</nav>
 
-		<div class="header-actions">
-			<a class="header-phone-link" href="tel:+591{contactInfo.landline}">
-				<Phone size={16} />
-				{contactInfo.landline}
-			</a>
-			<div class="header-cta">
-				<WhatsAppButton label="Agendar cita" />
+			<div class="header-actions">
+				<a class="header-phone-link" href="tel:+591{contactInfo.landline}">
+					<Phone size={16} />
+					{contactInfo.landline}
+				</a>
+				<div class="header-cta">
+					<WhatsAppButton label="Agendar cita" />
+				</div>
+				<button
+					class="menu-toggle"
+					onclick={toggleMenu}
+					aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
+					aria-expanded={menuOpen}
+				>
+					{#if menuOpen}
+						<X size={20} />
+					{:else}
+						<Menu size={20} />
+					{/if}
+				</button>
 			</div>
-			<button
-				class="menu-toggle"
-				onclick={toggleMenu}
-				aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
-				aria-expanded={menuOpen}
-			>
-				{#if menuOpen}
-					<X size={20} />
-				{:else}
-					<Menu size={20} />
-				{/if}
-			</button>
 		</div>
 	</div>
 
@@ -82,7 +84,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 24px;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 	}
 
 	.brand {
@@ -91,6 +93,7 @@
 		gap: 12px;
 		text-decoration: none;
 		color: var(--color-text);
+		flex-shrink: 0;
 	}
 
 	.brand-logo {
@@ -119,8 +122,9 @@
 
 	.nav-desktop {
 		display: flex;
-		gap: 28px;
-		flex-wrap: wrap;
+		gap: 18px;
+		flex-wrap: nowrap;
+		flex-shrink: 0;
 	}
 
 	.nav-desktop a {
@@ -130,10 +134,18 @@
 		font-size: 14px;
 	}
 
+	.header-right {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		flex-shrink: 0;
+	}
+
 	.header-actions {
 		display: flex;
 		align-items: center;
 		gap: 16px;
+		flex-shrink: 0;
 	}
 
 	.header-phone-link {
@@ -183,7 +195,11 @@
 		border-bottom: none;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 1200px) {
+		.header-bar {
+			flex-wrap: wrap;
+		}
+
 		.nav-desktop {
 			display: none;
 		}
