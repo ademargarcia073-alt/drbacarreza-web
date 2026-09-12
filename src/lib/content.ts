@@ -87,10 +87,9 @@ export const heroBadges: string[] = [
 // 5 párrafos biográficos del borrador, con marcado HTML inline (<strong>/<em>) para las
 // mismas frases que el prototipo de diseño resalta — son strings propios del contenido
 // (no input de usuario), por eso el componente los renderiza con {@html}.
-// El primer párrafo trae un dato pendiente de confirmar (años de trayectoria); el token
-// {{YEARS_PENDING}} marca dónde insertar el <PendingBadge> inline en vez de un corchete plano.
+// Años de trayectoria confirmados por el Dr. Bacarreza (16 años) — ya no es un dato pendiente.
 export const aboutParagraphs: string[] = [
-	'Con más de {{YEARS_PENDING}} de trayectoria en traumatología y ortopedia, el Dr. Fernando Bacarreza Bruno se especializa en cirugía reconstructiva y artroscópica de hombro y rodilla, combinando la práctica clínica diaria en La Paz con una activa participación en la comunidad científica latinoamericana.',
+	'Con más de 16 años de trayectoria en traumatología y ortopedia, el Dr. Fernando Bacarreza Bruno se especializa en cirugía reconstructiva y artroscópica de hombro y rodilla, combinando la práctica clínica diaria en La Paz con una activa participación en la comunidad científica latinoamericana.',
 	'Es <strong>Jefe del Departamento de Traumatología del Seguro Social Universitario</strong>, afiliado a la Universidad Mayor de San Andrés (UMSA), donde combina la atención a pacientes con la formación de nuevos especialistas.',
 	'A nivel internacional, forma parte del <strong>Consejo Directivo de SLARD</strong> (Sociedad Latinoamericana de Artroscopia, Rodilla y Deporte) y se desempeña como <strong>Coordinador País por Bolivia</strong>, representando al país en foros científicos junto a especialistas de Argentina, Brasil, Chile, Colombia, Ecuador, Paraguay, Perú y Uruguay. En Bolivia, es <strong>Presidente electo de ABAMED</strong> (Asociación Boliviana de Artroscopia y Medicina Deportiva), sociedad que organiza regularmente cursos y congresos con expositores internacionales en La Paz.',
 	'Su compromiso con la actualización constante lo ha llevado a participar como ponente en congresos internacionales — como el XXIX Congreso SLAOT (San José, Costa Rica, 2023) y las Jornadas Latinoamericanas SLARD (Santiago de Chile, 2025) — y a capacitarse directamente con fabricantes líderes de tecnología en artroscopia, como Arthrex, en Estados Unidos.',
