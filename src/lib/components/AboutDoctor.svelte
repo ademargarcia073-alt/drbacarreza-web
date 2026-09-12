@@ -2,7 +2,6 @@
 	import quirofano from '$lib/assets/images/sobre-dr-quirofano.jpg';
 	import estudiantes from '$lib/assets/images/sobre-dr-estudiantes.jpg';
 	import { aboutParagraphs, aboutPersonalQuote, credentialLine } from '$lib/content';
-	import PendingBadge from './shared/PendingBadge.svelte';
 </script>
 
 <section id="sobre" class="about">
@@ -25,8 +24,7 @@
 			{/each}
 
 			<div class="about-quote">
-				<PendingBadge />
-				<p class="about-quote-text">{aboutPersonalQuote.note}</p>
+				<p class="about-quote-text">&ldquo;{aboutPersonalQuote.text}&rdquo;</p>
 			</div>
 
 			<p class="about-credential">{credentialLine}</p>
@@ -81,19 +79,16 @@
 	}
 
 	.about-quote {
-		border: 2px dashed var(--color-neutral-300);
-		padding: 24px;
+		border-left: 4px solid var(--color-accent);
+		padding: 4px 0 4px 24px;
 		margin: 0 0 28px;
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-		align-items: flex-start;
 	}
 
 	.about-quote-text {
-		font-size: 15px;
+		font-size: 17px;
 		line-height: 1.6;
-		color: var(--color-text-secondary);
+		color: var(--color-text);
+		font-weight: 600;
 		font-style: italic;
 		margin: 0;
 	}

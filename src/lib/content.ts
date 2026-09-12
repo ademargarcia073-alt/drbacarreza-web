@@ -97,9 +97,9 @@ export const aboutParagraphs: string[] = [
 	'Es coautor de una publicación científica en el <em>Journal of ISAKOS</em> (International Society of Arthroscopy, Knee Surgery and Orthopaedic Sports Medicine), sobre consenso latinoamericano en reconstrucción de ligamento cruzado anterior — evidencia de que su práctica está respaldada por investigación de nivel internacional. Además, es coautor de "Inestabilidad en el hombro" (junto a C. Jette Mostacedo y F. A. Claros Pizarro) en el <em>Tratado de Cirugía Ortopédica y Traumatología</em>, obra de referencia editada por Pere Torner Pifarré y Javier Vaquero Martín (Editorial Médica Panamericana).'
 ];
 
+// Frase personal confirmada por el Dr. Bacarreza — ya no es un dato pendiente.
 export const aboutPersonalQuote = {
-	pending: true,
-	note: 'Espacio para una frase personal del Dr. Bacarreza sobre su filosofía de atención al paciente — pedírsela directamente, en su propia voz.'
+	text: 'Tu recuperación es mi prioridad: te escucho, te explico y te acompaño, porque el objetivo no es solo curar la lesión, sino devolverte tu vida con confianza.'
 };
 
 export const credentialLine = 'Colegio Médico de La Paz, N.º B-0252 — Especialidad Traumatología y Ortopedia.';
