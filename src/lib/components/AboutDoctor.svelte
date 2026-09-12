@@ -3,9 +3,6 @@
 	import estudiantes from '$lib/assets/images/sobre-dr-estudiantes.jpg';
 	import { aboutParagraphs, aboutPersonalQuote, credentialLine } from '$lib/content';
 	import PendingBadge from './shared/PendingBadge.svelte';
-
-	const [yearsPrefix, yearsSuffix] = aboutParagraphs[0].split('{{YEARS_PENDING}}');
-	const restParagraphs = aboutParagraphs.slice(1);
 </script>
 
 <section id="sobre" class="about">
@@ -23,10 +20,7 @@
 			<p class="kicker">Sobre el Dr. Bacarreza</p>
 			<h2 class="h2">Trayectoria clínica y compromiso académico</h2>
 
-			<p class="about-paragraph">
-				{yearsPrefix}<PendingBadge /> [X años]{yearsSuffix}
-			</p>
-			{#each restParagraphs as paragraph, i (i)}
+			{#each aboutParagraphs as paragraph, i (i)}
 				<p class="about-paragraph">{@html paragraph}</p>
 			{/each}
 
