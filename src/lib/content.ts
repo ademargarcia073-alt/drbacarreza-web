@@ -19,6 +19,20 @@ import type {
 import casoHumeroRadiografia1 from './assets/images/casos/caso-humero-proximal-radiografia-1.jpg';
 import casoHumeroRadiografia2 from './assets/images/casos/caso-humero-proximal-radiografia-2.jpg';
 import casoHumeroRadiografia3 from './assets/images/casos/caso-humero-proximal-radiografia-3.jpg';
+import casoGenuVaro1 from './assets/images/casos/caso-genu-varo-severo-1.jpg';
+import casoGenuVaro2 from './assets/images/casos/caso-genu-varo-severo-2.jpg';
+import casoGenuVaro3 from './assets/images/casos/caso-genu-varo-severo-3.jpg';
+import casoGenuVaro4 from './assets/images/casos/caso-genu-varo-severo-4.jpg';
+import casoGenuVaro5 from './assets/images/casos/caso-genu-varo-severo-5.jpg';
+import casoGenuVaro6 from './assets/images/casos/caso-genu-varo-severo-6.jpg';
+import casoAcetabulo1 from './assets/images/casos/caso-reconstruccion-acetabular-1.jpg';
+import casoAcetabulo2 from './assets/images/casos/caso-reconstruccion-acetabular-2.jpg';
+import casoAcetabulo3 from './assets/images/casos/caso-reconstruccion-acetabular-3.jpg';
+import casoAcetabulo4 from './assets/images/casos/caso-reconstruccion-acetabular-4.jpg';
+import casoAcetabulo5 from './assets/images/casos/caso-reconstruccion-acetabular-5.jpg';
+import casoAcetabulo6 from './assets/images/casos/caso-reconstruccion-acetabular-6.jpg';
+import casoAcetabulo7 from './assets/images/casos/caso-reconstruccion-acetabular-7.jpg';
+import casoAcetabulo8 from './assets/images/casos/caso-reconstruccion-acetabular-8.jpg';
 
 export const siteName = 'Dr. Fernando Bacarreza Bruno';
 
@@ -186,14 +200,12 @@ export const clinicalCases: ClinicalCase[] = [
 		context:
 			'Las fracturas de húmero proximal —la parte superior del brazo, cerca del hombro— requieren una reducción anatómica precisa para restaurar la movilidad completa del paciente. En este caso, la fijación se realizó con placa y tornillos, buscando una consolidación estable del hueso.',
 		// Radiografías sin EXIF ni texto identificable del paciente visible en el encuadre
-		// (revisado antes de subir); igual falta la confirmación de consentimiento — ver pending.
+		// (revisado antes de subir). Consentimiento del paciente confirmado por el Dr. Bacarreza
+		// para uso de marketing.
 		images: [casoHumeroRadiografia1, casoHumeroRadiografia2, casoHumeroRadiografia3],
 		videoEmbedUrl: 'https://www.youtube.com/embed/uz6peHDpero',
 		videoTitle:
-			'Video demostrativo: reducción y fijación de fractura de húmero proximal — Dr. Fernando Bacarreza',
-		pending: true,
-		pendingNote:
-			'Confirmar consentimiento del paciente para publicar estas radiografías y el video con fines de marketing'
+			'Video demostrativo: reducción y fijación de fractura de húmero proximal — Dr. Fernando Bacarreza'
 	},
 	{
 		slug: 'extrusion-meniscal-lateral',
@@ -208,10 +220,43 @@ export const clinicalCases: ClinicalCase[] = [
 			'https://videos.drfernandobacarreza.com/caso02/extrusion-meniscal-02.mp4',
 			'https://videos.drfernandobacarreza.com/caso02/extrusion-meniscal-03.mp4'
 		],
-		videoTitle: 'Extrusión meniscal lateral — centralización con túneles',
-		pending: true,
-		pendingNote:
-			'El Dr. Bacarreza confirmó que existe consentimiento de los pacientes; falta que quede documentado explícitamente para uso de marketing antes de publicar estos videos.'
+		videoTitle: 'Extrusión meniscal lateral — centralización con túneles'
+		// Consentimiento del paciente confirmado por el Dr. Bacarreza para uso de marketing.
+	},
+	{
+		slug: 'protesis-total-rodilla-genu-varo',
+		title: 'Prótesis total de rodilla (genu varo severo)',
+		context: 'Prótesis total de rodilla en paciente con genu varo severo.',
+		// Fotos ya limpias de datos identificables (sin EXIF, provistas por el Dr. Bacarreza).
+		// Consentimiento del paciente confirmado para uso de marketing. Orden entre las 6 fotos
+		// dentro de la galería es indiferente.
+		images: [
+			casoGenuVaro1,
+			casoGenuVaro2,
+			casoGenuVaro3,
+			casoGenuVaro4,
+			casoGenuVaro5,
+			casoGenuVaro6
+		]
+	},
+	{
+		slug: 'reconstruccion-acetabular-protesis-cadera',
+		title: 'Reconstrucción acetabular y prótesis de cadera',
+		context:
+			'Paciente con una fractura acetabular compleja, asociada a artrosis de la cabeza femoral. Se le realizó una reconstrucción y reparación del acetábulo, junto con la colocación de una prótesis de cadera.',
+		// Fotos ya limpias de datos identificables (sin EXIF, provistas por el Dr. Bacarreza).
+		// Consentimiento del paciente confirmado para uso de marketing. Orden entre las 8 fotos
+		// dentro de la galería es indiferente.
+		images: [
+			casoAcetabulo1,
+			casoAcetabulo2,
+			casoAcetabulo3,
+			casoAcetabulo4,
+			casoAcetabulo5,
+			casoAcetabulo6,
+			casoAcetabulo7,
+			casoAcetabulo8
+		]
 	}
 ];
 
