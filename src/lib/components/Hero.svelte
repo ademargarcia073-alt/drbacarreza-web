@@ -17,7 +17,7 @@
 		</div>
 		<div class="hero-ctas">
 			<WhatsAppButton label="Agendar consulta por WhatsApp" />
-			<a class="btn btn-secondary" href="#sobre">Conocer al Dr. Bacarreza</a>
+			<a class="btn btn-secondary" href="#sobre">Conoce al Dr. Bacarreza</a>
 		</div>
 	</div>
 	<div class="hero-image">

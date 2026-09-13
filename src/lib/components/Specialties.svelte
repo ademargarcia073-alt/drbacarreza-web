@@ -4,10 +4,10 @@
 	import ShieldCheck from '@lucide/svelte/icons/shield-check';
 	import Zap from '@lucide/svelte/icons/zap';
 	import User from '@lucide/svelte/icons/user';
-	import { specialties, specialtiesPendingNote } from '$lib/content';
-	import PendingBadge from './shared/PendingBadge.svelte';
+	import Bone from '@lucide/svelte/icons/bone';
+	import { specialties } from '$lib/content';
 
-	const icons: Record<string, typeof Activity> = { Activity, Target, ShieldCheck, Zap, User };
+	const icons: Record<string, typeof Activity> = { Activity, Target, ShieldCheck, Zap, User, Bone };
 </script>
 
 <section id="especialidades" class="specialties">
@@ -24,10 +24,6 @@
 					<p>{specialty.description}</p>
 				</div>
 			{/each}
-			<div class="specialty-card specialty-pending">
-				<PendingBadge />
-				<p>{specialtiesPendingNote}</p>
-			</div>
 		</div>
 	</div>
 </section>
@@ -62,17 +58,6 @@
 		line-height: 1.6;
 		color: var(--color-text-secondary);
 		margin: 0;
-	}
-
-	.specialty-pending {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-		justify-content: center;
-	}
-
-	.specialty-pending p {
-		font-size: 13px;
 	}
 
 	@media (max-width: 768px) {

@@ -150,11 +150,14 @@ export const specialties: Specialty[] = [
 		title: 'Traumatología general de adultos',
 		description:
 			'Diagnóstico y tratamiento de fracturas, lesiones articulares y patologías del sistema musculoesquelético.'
+	},
+	{
+		icon: 'Bone',
+		title: 'Cirugía de reemplazo articular',
+		description:
+			'Colocación de prótesis de rodilla y cadera en pacientes con artrosis avanzada, deformidades articulares (como genu varo) o fracturas complejas que comprometen la articulación.'
 	}
 ];
-
-export const specialtiesPendingNote =
-	'Confirmar con el Dr. Bacarreza si desea agregar o quitar alguna línea de servicio — por ejemplo, si también atiende prótesis articulares, columna, u otras subespecialidades no mencionadas en el material revisado.';
 
 // --- Trayectoria ---
 export const timeline: TimelineItem[] = [
