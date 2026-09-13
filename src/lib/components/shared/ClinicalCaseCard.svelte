@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ClinicalCase } from '$lib/types';
 	import PendingBadge from './PendingBadge.svelte';
+	import VideoPlayer from './VideoPlayer.svelte';
 
 	let { caseItem }: { caseItem: ClinicalCase } = $props();
 </script>
@@ -8,7 +9,7 @@
 <article class="case-card">
 	<h3>{caseItem.title}</h3>
 
-	{#if caseItem.images.length > 0 || caseItem.videoEmbedUrl}
+	{#if caseItem.images.length > 0 || caseItem.videoEmbedUrl || (caseItem.videos?.length ?? 0) > 0}
 		<div class="case-media">
 			{#each caseItem.images as image, i (image)}
 				<div class="case-image">
@@ -26,6 +27,14 @@
 					></iframe>
 				</div>
 			{/if}
+			{#each caseItem.videos ?? [] as videoSrc, i (videoSrc)}
+				<div class="case-video">
+					<VideoPlayer
+						src={videoSrc}
+						title={`${caseItem.videoTitle ?? caseItem.title} — video ${i + 1}`}
+					/>
+				</div>
+			{/each}
 		</div>
 	{:else}
 		<p class="case-media-note">Imágenes pendientes de subir.</p>
@@ -36,7 +45,9 @@
 		<p class="case-quote-attribution">— {caseItem.quoteAttribution}</p>
 	</blockquote>
 
-	<p class="case-context">{caseItem.context}</p>
+	{#if caseItem.context}
+		<p class="case-context">{caseItem.context}</p>
+	{/if}
 
 	{#if caseItem.pending}
 		<div class="case-pending">
