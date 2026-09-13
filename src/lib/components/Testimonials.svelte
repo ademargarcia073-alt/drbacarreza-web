@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { testimonials } from '$lib/content';
-	import PendingBadge from './shared/PendingBadge.svelte';
 </script>
 
 <section id="testimonios" class="testimonials">
@@ -12,14 +11,6 @@
 			<blockquote class="testimonial">
 				<p class="testimonial-quote">"{testimonial.quote}"</p>
 				<p class="testimonial-attribution">— {testimonial.attribution}</p>
-				{#if testimonial.pending}
-					<div class="testimonial-pending">
-						<PendingBadge />
-						{#if testimonial.pendingNote}
-							<span class="testimonial-pending-note">{testimonial.pendingNote}</span>
-						{/if}
-					</div>
-				{/if}
 			</blockquote>
 		{/each}
 	</div>
@@ -55,17 +46,5 @@
 		font-weight: 700;
 		color: var(--color-text-secondary);
 		margin: 0 0 12px;
-	}
-
-	.testimonial-pending {
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 8px;
-	}
-
-	.testimonial-pending-note {
-		font-size: 13px;
-		color: var(--color-text-secondary);
 	}
 </style>
