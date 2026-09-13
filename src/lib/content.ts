@@ -65,8 +65,7 @@ export const contactInfo = {
 	// Mismo número que whatsappNumber, en formato local para mostrar en pantalla.
 	whatsappDisplay: '77210582',
 	whatsappPending: true, // "[confirmar si 77210582 es el número que quiere usar para agendar citas por WhatsApp]"
-	hours: 'Lunes a viernes, 18:00 a 20:00',
-	hoursPending: true, // "[confirmar si sigue vigente]"
+	hours: 'Lunes, miércoles y viernes, 17:00 a 20:00',
 	// Coordenadas exactas del Edificio CES (verificadas en Google Maps), para que el pin del
 	// embed caiga sobre el edificio en vez de aproximar por geocodificación de texto.
 	coordinates: { lat: -16.5260338, lng: -68.11025599999999 }
@@ -289,8 +288,8 @@ export const whatToBring: string[] = [
 	'Lista de medicamentos que tomas actualmente'
 ];
 
-export const consultationPendingNote =
-	'Confirmar duración aproximada de la consulta, si se requiere cita previa siempre o si hay atención por urgencias, y método de pago aceptado.';
+export const consultationDurationNote =
+	'La consulta tiene una duración aproximada de 20 minutos y se atiende con cita previa.';
 
 // --- FAQ ---
 export const faqs: FaqItem[] = [
@@ -311,15 +310,11 @@ export const faqs: FaqItem[] = [
 	},
 	{
 		question: '¿Atienden urgencias?',
-		answer:
-			'La fuente pública indica "Emergencia bajo cita" — conviene verificar con el Dr. Bacarreza si esto sigue siendo así.',
-		pending: true
+		answer: 'Sí, se atienden emergencias.'
 	},
 	{
 		question: '¿Trabajan con seguros médicos?',
-		answer:
-			'El Dr. Bacarreza trabaja en el Seguro Social Universitario, pero falta aclarar si la consulta privada acepta seguros privados o solo pago particular.',
-		pending: true
+		answer: 'Sí, trabaja con los seguros Alianza, Univida y Nacional Vida.'
 	}
 ];
 
@@ -339,9 +334,16 @@ export const testimonials: Testimonial[] = [
 ];
 
 // --- Footer / redes sociales ---
-// Ambas quedan pendientes en la UI: Facebook está confirmado como canal a vincular pero falta
-// la URL exacta de la página; LinkedIn existe pero está poco activo, a confirmar si se vincula.
 export const footerSocials: SocialLink[] = [
-	{ label: 'Facebook', href: null, pending: true },
-	{ label: 'LinkedIn', href: null, pending: true }
+	{ label: 'Facebook', href: 'https://www.facebook.com/fernandobacarreza', icon: 'facebook' },
+	{
+		label: 'Instagram',
+		href: 'https://www.instagram.com/fernanado_bacarreza/',
+		icon: 'instagram'
+	},
+	{
+		label: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/fernando-bacarreza-bruno-35230b28/',
+		icon: 'linkedin'
+	}
 ];

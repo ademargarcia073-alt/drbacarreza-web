@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { firstVisitText, whatToBring, consultationPendingNote } from '$lib/content';
-	import PendingBadge from './shared/PendingBadge.svelte';
+	import { firstVisitText, whatToBring, consultationDurationNote } from '$lib/content';
 </script>
 
 <section id="consulta" class="consultation">
@@ -23,10 +22,7 @@
 			</div>
 		</div>
 
-		<p class="consulta-note">
-			<PendingBadge />
-			<span>{consultationPendingNote}</span>
-		</p>
+		<p class="consulta-note">{consultationDurationNote}</p>
 	</div>
 </section>
 
@@ -70,9 +66,6 @@
 	}
 
 	.consulta-note {
-		display: flex;
-		align-items: center;
-		gap: 8px;
 		font-size: 13px;
 		color: var(--color-text-secondary);
 		margin-top: 16px;

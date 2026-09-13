@@ -30,12 +30,7 @@
 
 			<div class="location-row">
 				<Clock size={20} color="var(--color-accent-700)" strokeWidth={2} />
-				<p>
-					{contactInfo.hours}
-					{#if contactInfo.hoursPending}
-						<PendingBadge />
-					{/if}
-				</p>
+				<p>{contactInfo.hours}</p>
 			</div>
 		</div>
 
