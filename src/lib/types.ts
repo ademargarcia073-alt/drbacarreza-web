@@ -37,15 +37,25 @@ export interface SocialLink {
 	pending?: boolean;
 }
 
+/** Un ítem individual dentro de la galería/lightbox de un caso clínico. */
+export interface CaseMediaItem {
+	type: 'image' | 'video' | 'embed';
+	src: string;
+	alt: string;
+}
+
 export interface ClinicalCase {
 	slug: string;
 	title: string;
 	quote: string;
 	quoteAttribution: string;
-	context: string;
+	context?: string;
 	images: string[];
+	/** Video embebido por iframe (ej. YouTube) — para reproductor HTML5 nativo, usar `videos`. */
 	videoEmbedUrl?: string;
 	videoTitle?: string;
+	/** URLs de video (mp4) reproducidas con el <video> nativo — sin orden significativo. */
+	videos?: string[];
 	pending?: boolean;
 	pendingNote?: string;
 }

@@ -194,6 +194,24 @@ export const clinicalCases: ClinicalCase[] = [
 		pending: true,
 		pendingNote:
 			'Confirmar consentimiento del paciente para publicar estas radiografías y el video con fines de marketing'
+	},
+	{
+		slug: 'extrusion-meniscal-lateral',
+		title: 'Extrusión meniscal lateral',
+		quote: 'Dx: Extrusión meniscal lateral. Cirugía: centralización con túneles.',
+		quoteAttribution: 'Dr. Fernando Bacarreza Bruno',
+		images: [],
+		// Videos alojados en Cloudflare R2 (fuera de Vite/git) — no son imports de asset local.
+		// Orden entre los 3 videos es indiferente.
+		videos: [
+			'https://videos.drfernandobacarreza.com/caso02/extrusion-meniscal-01.mp4',
+			'https://videos.drfernandobacarreza.com/caso02/extrusion-meniscal-02.mp4',
+			'https://videos.drfernandobacarreza.com/caso02/extrusion-meniscal-03.mp4'
+		],
+		videoTitle: 'Extrusión meniscal lateral — centralización con túneles',
+		pending: true,
+		pendingNote:
+			'El Dr. Bacarreza confirmó que existe consentimiento de los pacientes; falta que quede documentado explícitamente para uso de marketing antes de publicar estos videos.'
 	}
 ];
 
