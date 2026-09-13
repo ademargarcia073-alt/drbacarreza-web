@@ -47,8 +47,9 @@ export interface CaseMediaItem {
 export interface ClinicalCase {
 	slug: string;
 	title: string;
-	quote: string;
-	quoteAttribution: string;
+	/** Cita textual atribuida al Dr. Bacarreza — algunos casos no tienen, solo `context`. */
+	quote?: string;
+	quoteAttribution?: string;
 	context?: string;
 	images: string[];
 	/** Video embebido por iframe (ej. YouTube) — para reproductor HTML5 nativo, usar `videos`. */

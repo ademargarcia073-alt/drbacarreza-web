@@ -77,10 +77,14 @@
 		<p class="case-media-note">Imágenes pendientes de subir.</p>
 	{/if}
 
-	<blockquote class="case-quote">
-		<p class="case-quote-text">"{caseItem.quote}"</p>
-		<p class="case-quote-attribution">— {caseItem.quoteAttribution}</p>
-	</blockquote>
+	{#if caseItem.quote}
+		<blockquote class="case-quote">
+			<p class="case-quote-text">"{caseItem.quote}"</p>
+			{#if caseItem.quoteAttribution}
+				<p class="case-quote-attribution">— {caseItem.quoteAttribution}</p>
+			{/if}
+		</blockquote>
+	{/if}
 
 	{#if caseItem.context}
 		<p class="case-context">{caseItem.context}</p>
