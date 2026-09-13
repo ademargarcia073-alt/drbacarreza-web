@@ -64,7 +64,6 @@ export const contactInfo = {
 	landline: '22750683',
 	// Mismo número que whatsappNumber, en formato local para mostrar en pantalla.
 	whatsappDisplay: '77210582',
-	whatsappPending: true, // "[confirmar si 77210582 es el número que quiere usar para agendar citas por WhatsApp]"
 	hours: 'Lunes, miércoles y viernes, 17:00 a 20:00',
 	// Coordenadas exactas del Edificio CES (verificadas en Google Maps), para que el pin del
 	// embed caiga sobre el edificio en vez de aproximar por geocodificación de texto.
@@ -187,9 +186,6 @@ export const timeline: TimelineItem[] = [
 		text: 'Expositor, Congreso Nacional de Actualización en Medicina del Fútbol (ABAMED), Cochabamba'
 	}
 ];
-
-export const timelineNote =
-	'Esta sección se actualiza con cada nuevo evento académico del Dr. Bacarreza.';
 
 // --- Intervenciones (Casos clínicos) ---
 // Sección nueva (borrador, sección 5.1). Diseñada como lista, no como bloque fijo de un caso —
@@ -319,17 +315,14 @@ export const faqs: FaqItem[] = [
 ];
 
 // --- Testimonios ---
-// Atribución con iniciales únicamente (R.Q.S.) — resguardo hasta tener consentimiento explícito
-// de la paciente para publicar su nombre completo. El pendingNote es un badge propio, separado
-// del texto del testimonio, que documenta puntualmente qué falta confirmar (el consentimiento
-// de uso, no el contenido de la cita en sí).
+// Atribución con iniciales únicamente (R.Q.S.) — se mantiene así porque no se confirmó el
+// nombre completo de la paciente, aunque el Dr. Bacarreza ya confirmó el consentimiento de uso
+// del testimonio con fines de marketing.
 export const testimonials: Testimonial[] = [
 	{
 		quote:
 			'Agradezco a Dios y al Dr. Bacarreza por la exitosa intervención quirúrgica [...] Todo ello se ve reflejado en mi situación actual, ya que gozo de buena salud, como resultado de una intervención quirúrgica y de una recuperación exitosas, y lo más importante, a la fecha no sufro de molestias o problema alguno.',
-		attribution: 'R.Q.S., paciente tratada por fractura de tibia y peroné (2019)',
-		pending: true,
-		pendingNote: 'Consentimiento de uso con fines de marketing'
+		attribution: 'R.Q.S., paciente tratada por fractura de tibia y peroné (2019)'
 	}
 ];
 

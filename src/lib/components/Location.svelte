@@ -3,7 +3,6 @@
 	import Phone from '@lucide/svelte/icons/phone';
 	import Clock from '@lucide/svelte/icons/clock';
 	import { contactInfo, googleMapsEmbedSrc } from '$lib/content';
-	import PendingBadge from './shared/PendingBadge.svelte';
 </script>
 
 <section id="ubicacion" class="location">
@@ -22,9 +21,6 @@
 				<p>
 					Teléfono: {contactInfo.landline}<br />
 					Celular / WhatsApp: {contactInfo.whatsappDisplay}
-					{#if contactInfo.whatsappPending}
-						<PendingBadge />
-					{/if}
 				</p>
 			</div>
 
@@ -75,11 +71,6 @@
 		font-size: 15px;
 		line-height: 1.6;
 		color: var(--color-text);
-	}
-
-	.location-row :global(.pending-badge) {
-		margin-left: 6px;
-		vertical-align: middle;
 	}
 
 	.map-embed-wrap {

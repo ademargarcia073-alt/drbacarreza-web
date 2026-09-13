@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { timeline, timelineNote } from '$lib/content';
+	import { timeline } from '$lib/content';
 </script>
 
 <section id="trayectoria" class="timeline-section">
@@ -15,8 +15,6 @@
 				</div>
 			{/each}
 		</div>
-
-		<p class="timeline-note">{timelineNote}</p>
 	</div>
 </section>
 
@@ -48,12 +46,6 @@
 		font-size: 15px;
 		line-height: 1.6;
 		color: var(--color-text);
-	}
-
-	.timeline-note {
-		font-size: 13px;
-		color: var(--color-text-secondary);
-		margin-top: 20px;
 	}
 
 	@media (max-width: 768px) {
