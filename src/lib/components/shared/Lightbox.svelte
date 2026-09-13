@@ -62,16 +62,20 @@
 			<X size={22} />
 		</button>
 
-		{#if items.length > 1}
-			<button class="lightbox-nav lightbox-prev" onclick={prev} aria-label="Foto o video anterior">
-				<ChevronLeft size={28} />
-			</button>
-			<button class="lightbox-nav lightbox-next" onclick={next} aria-label="Siguiente foto o video">
-				<ChevronRight size={28} />
-			</button>
-		{/if}
-
 		<div class="lightbox-media">
+			{#if items.length > 1}
+				<button
+					class="lightbox-nav lightbox-prev"
+					onclick={prev}
+					aria-label="Foto o video anterior"
+				>
+					<ChevronLeft size={28} />
+				</button>
+				<button class="lightbox-nav lightbox-next" onclick={next} aria-label="Siguiente foto o video">
+					<ChevronRight size={28} />
+				</button>
+			{/if}
+
 			{#key index}
 				{#if items[index].type === 'image'}
 					<img src={items[index].src} alt={items[index].alt} />
@@ -117,6 +121,7 @@
 	}
 
 	.lightbox-media {
+		position: relative;
 		width: 100%;
 		display: flex;
 		align-items: center;
@@ -161,10 +166,15 @@
 		cursor: pointer;
 	}
 
+	/* Centrados en .lightbox-media (no en .lightbox-content, que también incluye el contador de
+	   abajo) y con "bottom" reservado en vez de top:50%, para que nunca invadan la franja donde
+	   viven los controles nativos del <video> (play/pausa, volumen, pantalla completa) —
+	   independientemente de qué tan alto o bajo resulte el video según su aspect ratio. */
 	.lightbox-nav {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 0;
+		bottom: 56px;
+		margin: auto 0;
 		width: 48px;
 		height: 48px;
 		display: flex;
