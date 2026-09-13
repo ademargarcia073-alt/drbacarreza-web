@@ -14,10 +14,10 @@
 
 <style>
 	video {
-		width: 100%;
-		height: 100%;
 		display: block;
+		width: 100%;
+		max-width: 100%;
+		height: auto;
 		background: #000;
-		object-fit: cover;
 	}
 </style>

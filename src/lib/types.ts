@@ -37,6 +37,13 @@ export interface SocialLink {
 	pending?: boolean;
 }
 
+/** Un ítem individual dentro de la galería/lightbox de un caso clínico. */
+export interface CaseMediaItem {
+	type: 'image' | 'video' | 'embed';
+	src: string;
+	alt: string;
+}
+
 export interface ClinicalCase {
 	slug: string;
 	title: string;
