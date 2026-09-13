@@ -205,9 +205,6 @@ export const clinicalCases: ClinicalCase[] = [
 	{
 		slug: 'fractura-humero-proximal',
 		title: 'Fractura de húmero proximal',
-		quote:
-			'Una fractura de húmero proximal debe ser reducida de forma anatómica. Acude con traumatólogos expertos, podemos ayudarte.',
-		quoteAttribution: 'Dr. Fernando Bacarreza Bruno',
 		context:
 			'Las fracturas de húmero proximal —la parte superior del brazo, cerca del hombro— requieren una reducción anatómica precisa para restaurar la movilidad completa del paciente. En este caso, la fijación se realizó con placa y tornillos, buscando una consolidación estable del hueso.',
 		// Radiografías sin EXIF ni texto identificable del paciente visible en el encuadre
@@ -221,8 +218,7 @@ export const clinicalCases: ClinicalCase[] = [
 	{
 		slug: 'extrusion-meniscal-lateral',
 		title: 'Extrusión meniscal lateral',
-		quote: 'Dx: Extrusión meniscal lateral. Cirugía: centralización con túneles.',
-		quoteAttribution: 'Dr. Fernando Bacarreza Bruno',
+		context: 'Dx: Extrusión meniscal lateral. Cirugía: centralización con túneles.',
 		images: [],
 		// Videos alojados en Cloudflare R2 (fuera de Vite/git) — no son imports de asset local.
 		// Orden entre los 3 videos es indiferente.
