@@ -65,8 +65,7 @@ export const contactInfo = {
 	// Mismo número que whatsappNumber, en formato local para mostrar en pantalla.
 	whatsappDisplay: '77210582',
 	whatsappPending: true, // "[confirmar si 77210582 es el número que quiere usar para agendar citas por WhatsApp]"
-	hours: 'Lunes a viernes, 18:00 a 20:00',
-	hoursPending: true, // "[confirmar si sigue vigente]"
+	hours: 'Lunes, miércoles y viernes, 17:00 a 20:00',
 	// Coordenadas exactas del Edificio CES (verificadas en Google Maps), para que el pin del
 	// embed caiga sobre el edificio en vez de aproximar por geocodificación de texto.
 	coordinates: { lat: -16.5260338, lng: -68.11025599999999 }
@@ -205,24 +204,22 @@ export const clinicalCases: ClinicalCase[] = [
 	{
 		slug: 'fractura-humero-proximal',
 		title: 'Fractura de húmero proximal',
-		quote:
-			'Una fractura de húmero proximal debe ser reducida de forma anatómica. Acude con traumatólogos expertos, podemos ayudarte.',
-		quoteAttribution: 'Dr. Fernando Bacarreza Bruno',
 		context:
 			'Las fracturas de húmero proximal —la parte superior del brazo, cerca del hombro— requieren una reducción anatómica precisa para restaurar la movilidad completa del paciente. En este caso, la fijación se realizó con placa y tornillos, buscando una consolidación estable del hueso.',
 		// Radiografías sin EXIF ni texto identificable del paciente visible en el encuadre
 		// (revisado antes de subir). Consentimiento del paciente confirmado por el Dr. Bacarreza
 		// para uso de marketing.
 		images: [casoHumeroRadiografia1, casoHumeroRadiografia2, casoHumeroRadiografia3],
-		videoEmbedUrl: 'https://www.youtube.com/embed/uz6peHDpero',
+		// Video alojado en Cloudflare R2 (fuera de Vite/git), reproducido con el <video> nativo —
+		// mismo patrón que el caso 2. Reemplaza el embed de YouTube que tenía este caso antes.
+		videos: ['https://videos.drfernandobacarreza.com/caso01/humero-proximal-01.mp4'],
 		videoTitle:
 			'Video demostrativo: reducción y fijación de fractura de húmero proximal — Dr. Fernando Bacarreza'
 	},
 	{
 		slug: 'extrusion-meniscal-lateral',
 		title: 'Extrusión meniscal lateral',
-		quote: 'Dx: Extrusión meniscal lateral. Cirugía: centralización con túneles.',
-		quoteAttribution: 'Dr. Fernando Bacarreza Bruno',
+		context: 'Dx: Extrusión meniscal lateral. Cirugía: centralización con túneles.',
 		images: [],
 		// Videos alojados en Cloudflare R2 (fuera de Vite/git) — no son imports de asset local.
 		// Orden entre los 3 videos es indiferente.
@@ -291,8 +288,8 @@ export const whatToBring: string[] = [
 	'Lista de medicamentos que tomas actualmente'
 ];
 
-export const consultationPendingNote =
-	'Confirmar duración aproximada de la consulta, si se requiere cita previa siempre o si hay atención por urgencias, y método de pago aceptado.';
+export const consultationDurationNote =
+	'La consulta tiene una duración aproximada de 20 minutos y se atiende con cita previa.';
 
 // --- FAQ ---
 export const faqs: FaqItem[] = [
@@ -313,15 +310,11 @@ export const faqs: FaqItem[] = [
 	},
 	{
 		question: '¿Atienden urgencias?',
-		answer:
-			'La fuente pública indica "Emergencia bajo cita" — conviene verificar con el Dr. Bacarreza si esto sigue siendo así.',
-		pending: true
+		answer: 'Sí, se atienden emergencias.'
 	},
 	{
 		question: '¿Trabajan con seguros médicos?',
-		answer:
-			'El Dr. Bacarreza trabaja en el Seguro Social Universitario, pero falta aclarar si la consulta privada acepta seguros privados o solo pago particular.',
-		pending: true
+		answer: 'Sí, trabaja con los seguros Alianza, Univida y Nacional Vida.'
 	}
 ];
 
@@ -341,9 +334,16 @@ export const testimonials: Testimonial[] = [
 ];
 
 // --- Footer / redes sociales ---
-// Ambas quedan pendientes en la UI: Facebook está confirmado como canal a vincular pero falta
-// la URL exacta de la página; LinkedIn existe pero está poco activo, a confirmar si se vincula.
 export const footerSocials: SocialLink[] = [
-	{ label: 'Facebook', href: null, pending: true },
-	{ label: 'LinkedIn', href: null, pending: true }
+	{ label: 'Facebook', href: 'https://www.facebook.com/fernandobacarreza', icon: 'facebook' },
+	{
+		label: 'Instagram',
+		href: 'https://www.instagram.com/fernanado_bacarreza/',
+		icon: 'instagram'
+	},
+	{
+		label: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/fernando-bacarreza-bruno-35230b28/',
+		icon: 'linkedin'
+	}
 ];

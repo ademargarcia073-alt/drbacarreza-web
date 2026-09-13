@@ -33,8 +33,8 @@ export interface Testimonial {
 
 export interface SocialLink {
 	label: string;
-	href: string | null;
-	pending?: boolean;
+	href: string;
+	icon: string;
 }
 
 /** Un ítem individual dentro de la galería/lightbox de un caso clínico. */
