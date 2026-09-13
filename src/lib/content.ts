@@ -208,7 +208,7 @@ export const clinicalCases: ClinicalCase[] = [
 		images: [casoHumeroRadiografia1, casoHumeroRadiografia2, casoHumeroRadiografia3],
 		// Video alojado en Cloudflare R2 (fuera de Vite/git), reproducido con el <video> nativo —
 		// mismo patrón que el caso 2. Reemplaza el embed de YouTube que tenía este caso antes.
-		videos: ['https://videos.drfernandobacarreza.com/caso01/humero-proximal-01.mp4'],
+		videos: ['https://videos.drfernandobacarreza.com/caso01.mp4'],
 		videoTitle:
 			'Video demostrativo: reducción y fijación de fractura de húmero proximal — Dr. Fernando Bacarreza'
 	},
