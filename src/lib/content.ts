@@ -178,6 +178,14 @@ export const timeline: TimelineItem[] = [
 	{
 		year: '2025',
 		text: 'Expositor y organizador, VIII Congreso Nacional ABAMED, La Paz — ponencia "Salvar el menisco: abordaje diagnóstico"'
+	},
+	{
+		year: '2026',
+		text: 'Conferencista, Congreso SLARD, Perú — consenso ISAKOS sobre reconstrucción del ligamento anterolateral'
+	},
+	{
+		year: '2026',
+		text: 'Expositor, Congreso Nacional de Actualización en Medicina del Fútbol (ABAMED), Cochabamba'
 	}
 ];
 
