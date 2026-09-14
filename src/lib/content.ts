@@ -103,7 +103,7 @@ export const heroBadges: string[] = [
 // Años de trayectoria confirmados por el Dr. Bacarreza (16 años) — ya no es un dato pendiente.
 export const aboutParagraphs: string[] = [
 	'Con más de 16 años de trayectoria en traumatología y ortopedia, el Dr. Fernando Bacarreza Bruno se especializa en cirugía reconstructiva y artroscópica de hombro y rodilla, combinando la práctica clínica diaria en La Paz con una activa participación en la comunidad científica latinoamericana.',
-	'Es <strong>Jefe del Departamento de Traumatología del Seguro Social Universitario</strong>, afiliado a la Universidad Mayor de San Andrés (UMSA), donde combina la atención a pacientes con la formación de nuevos especialistas.',
+	'Es <strong>Jefe del Departamento de Traumatología del Seguro Social Universitario</strong>, afiliado a la Universidad Mayor de San Andrés (UMSA), donde combina la atención a pacientes con la formación de nuevos especialistas. Es docente titular de la cátedra de Traumatología en la UMSA desde hace 12 años, y fue jefe de dicha cátedra entre 2022 y 2024.',
 	'A nivel internacional, forma parte del <strong>Consejo Directivo de SLARD</strong> (Sociedad Latinoamericana de Artroscopia, Rodilla y Deporte) y se desempeña como <strong>Coordinador País por Bolivia</strong>, representando al país en foros científicos junto a especialistas de Argentina, Brasil, Chile, Colombia, Ecuador, Paraguay, Perú y Uruguay. En Bolivia, es <strong>Expresidente de ABAMED</strong> (Asociación Boliviana de Artroscopia y Medicina Deportiva), sociedad que organiza regularmente cursos y congresos con expositores internacionales en La Paz.',
 	'Su compromiso con la actualización constante lo ha llevado a participar como ponente en congresos internacionales — como el XXIX Congreso SLAOT (San José, Costa Rica, 2023) y las Jornadas Latinoamericanas SLARD (Santiago de Chile, 2025) — y a capacitarse directamente con fabricantes líderes de tecnología en artroscopia, como Arthrex, en Estados Unidos.',
 	'Es coautor de una publicación científica en el <em>Journal of ISAKOS</em> (International Society of Arthroscopy, Knee Surgery and Orthopaedic Sports Medicine), sobre consenso latinoamericano en reconstrucción de ligamento cruzado anterior — evidencia de que su práctica está respaldada por investigación de nivel internacional. Además, es coautor de "Inestabilidad en el hombro" (junto a C. Jette Mostacedo y F. A. Claros Pizarro) en el <em>Tratado de Cirugía Ortopédica y Traumatología</em>, obra de referencia editada por Pere Torner Pifarré y Javier Vaquero Martín (Editorial Médica Panamericana).'
@@ -159,6 +159,10 @@ export const specialties: Specialty[] = [
 
 // --- Trayectoria ---
 export const timeline: TimelineItem[] = [
+	{
+		year: '2022',
+		text: 'Jefe de la Cátedra de Traumatología, Universidad Mayor de San Andrés (UMSA)'
+	},
 	{ year: '2023', text: 'Ponente, XXIX Congreso Internacional SLAOT, San José, Costa Rica' },
 	{
 		year: '2024',
