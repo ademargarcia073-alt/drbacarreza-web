@@ -97,6 +97,9 @@
 		<div class="section-wrap footer-legal">
 			<p class="footer-text">© {year} {siteName}. Todos los derechos reservados.</p>
 			<p class="footer-text">Aviso legal · Política de privacidad</p>
+			<p class="footer-text">
+				Sitio web por <a class="footer-credit" href="https://contrachaos.net" target="_blank" rel="noopener">ContraChaos Solutions</a>
+			</p>
 		</div>
 	</div>
 </footer>
@@ -176,6 +179,16 @@
 
 	.footer-legal .footer-text {
 		margin: 0;
+	}
+
+	.footer-credit {
+		color: inherit;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.footer-credit:hover {
+		color: var(--color-accent-700);
 	}
 
 	@media (max-width: 768px) {
